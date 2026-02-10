@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Will You Be My Valentine 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card {
+    background: rgba(255,255,255,0.95);
+    padding: 50px 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(255,77,109,0.4);
+}
+ .heart {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 20px;
+        animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(100vh) scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-10vh) scale(1.6);
+            opacity: 0;
+        }
+    }
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 14px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#yes {
+    background: #ff4d6d;
+    color: white;
+    margin-right: 20px;
+}
+
+#no {
+    background: #eee;
+    position: absolute;
+}
+/* Hide Tenor hover buttons / links */
+.tenor-gif-embed a {
+    display: none !important;
+}
+
+/* Optional: prevent any hover interaction */
+.tenor-gif-embed {
+    pointer-events: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="signature">Will you be my Valentine?</div>
+
+    <!-- Tenor GIF embed -->
+    
+    <div class="tenor-gif-embed"
+         data-postid="13168878375741792886"
+         data-share-method="host"
+         data-aspect-ratio="1.00671"
+         data-width="100%">
+        <a href="https://tenor.com/view/bubu-dudu-bubu-dudu-bear-panda-gif-13168878375741792886">
+            Bubu Dudu Sticker
+        </a>
+        from <a href="https://tenor.com/search/bubu-stickers">Bubu Stickers</a>
+    </div>
+
+    <button id="yes" onclick="goNext()">Yes 💕</button>
+    <button id="no" onmouseover="moveNo()" ontouchstart="moveNo()">No 💔</button>
+</div>
+
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+<script>
+function moveNo() {
+    const no = document.getElementById("no");
+    no.style.left = Math.random() * (window.innerWidth - 120) + "px";
+    no.style.top = Math.random() * (window.innerHeight - 60) + "px";
+}
+
+function goNext() {
+    window.location.href = "letter.html";
+}
+
+setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }, 400);
+</script>
+
+</body>
+</html>

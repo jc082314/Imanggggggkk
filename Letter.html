@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd6e8, #ffb3c6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(255,77,109,0.4);
+    max-width: 380px;
+}
+ .heart {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 20px;
+        animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(30vh) scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-10vh) scale(1.6);
+            opacity: 0;
+        }
+    }
+h2 {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+.letter {
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #333;
+}
+/* Hide Tenor hover buttons / links */
+.tenor-gif-embed a {
+    display: none !important;
+}
+
+/* Optional: prevent any hover interaction */
+.tenor-gif-embed {
+    pointer-events: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>💌 My Love Letter</h2>
+
+    <div class="letter">
+        From the moment you said yes,  
+        my heart found its home.  
+
+        Thank you for choosing me today.  
+
+        I promise to love you  
+        in all the little ways. 💖
+    </div>
+
+    <!-- BUBU DUDU TENOR GIF -->
+    <div class="tenor-gif-embed" 
+         data-postid="8825422934715191138" 
+         data-share-method="host" 
+         data-aspect-ratio="0.975904" 
+         data-width="100%">
+        <a href="https://tenor.com/view/love-gif-8825422934715191138">Love GIF</a>
+        from <a href="https://tenor.com/search/love-gifs">Love GIFs</a>
+    </div>
+</div>
+<script>
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }, 400);
+</script>
+
+<!-- REQUIRED TENOR SCRIPT -->
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+</body>
+</html>
